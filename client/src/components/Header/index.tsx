@@ -9,29 +9,29 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="bg-info text-dark display-flex align-center">
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
-        <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+    <header>
+      <div>
+        <Link to="/">
+          <h1>
             Project 3
           </h1>
         </Link>
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
+              <Link to="/me">
                 View My Profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
+              <Link to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link to="/signup">
                 Signup
               </Link>
             </>

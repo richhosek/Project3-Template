@@ -41,7 +41,7 @@ const Profile = () => {
 
   return (
     <div>
-      <h2 className="card-header">
+      <h2>
         {profile?.name}
       </h2>
     </div>
